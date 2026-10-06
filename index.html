@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#05070d">
+    <title>XS Prescrição</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell" aria-label="XS Prescrição">
+      <section id="launchScreen" class="launch-screen" aria-labelledby="launchTitle">
+        <div class="launch-content">
+          <p class="eyebrow">XSTEAM · FERRAMENTA OPERACIONAL</p>
+          <h1 id="launchTitle">XS Prescrição</h1>
+          <p class="launch-copy">Acesse o aplicativo para consultar e acompanhar prescrições.</p>
+          <p id="connectionStatus" class="connection-status" role="status" aria-live="polite">Preparando aplicativo…</p>
+          <button id="retryButton" class="retry-button" type="button">Tentar novamente</button>
+        </div>
+      </section>
+      <iframe id="appFrame" title="Aplicativo XS Prescrição" allow="clipboard-read; clipboard-write"></iframe>
+    </main>
+  </body>
+</html>
