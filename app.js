@@ -15,14 +15,19 @@
       launch.hidden = false;
       return;
     }
-    status.textContent = navigator.onLine ? 'Conectando…' : 'Sem conexão';
-    if (navigator.onLine) frame.src = url;
+    if (!navigator.onLine) {
+      status.textContent = 'Sem conexão. Verifique a internet e tente novamente.';
+      launch.hidden = false;
+      return;
+    }
+    launch.hidden = true;
+    frame.src = url;
   }
 
   frame.addEventListener('load', function () {
     if (!configured) return;
     launch.hidden = true;
-    status.textContent = 'Conectado';
+    status.textContent = '';
   });
   frame.addEventListener('error', function () {
     status.textContent = 'Não foi possível carregar o aplicativo. Verifique a implantação e tente novamente.';

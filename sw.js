@@ -1,4 +1,4 @@
-const CACHE = 'xs-prescricao-shell-v1';
+const CACHE = 'xs-prescricao-shell-v2';
 const ASSETS = ['./', './index.html', './styles.css', './app.js', './config.js', './manifest.webmanifest', './offline.html'];
 
 self.addEventListener('install', event => {
